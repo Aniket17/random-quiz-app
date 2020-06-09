@@ -1,0 +1,10 @@
+<div class="col-sm-12">
+  <span class="col-sm-2 pull-left text-center"
+    [ngClass]="{'badge badge-success':question.selected,'badge badge-danger':!question.selected}"
+    [textContent]="question.selected?'Answered':'Not Answered'">
+  </span>
+  <span class="col-sm-6 text-center">{{question.content}}</span>
+  <span class="col-sm-4 pull-right text-center">
+    <button class="btn btn-info" (click)="goToQuestion($event)">Go to Question</button>
+  </span>
+</div>
