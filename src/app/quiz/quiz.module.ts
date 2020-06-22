@@ -9,6 +9,8 @@ import { QuizToobarComponent } from "./quiz-toobar/quiz-toobar.component";
 import { QuestionComponent } from "./question/question.component";
 import { ReviewQuestionComponent } from "./review-question/review-question.component";
 
+import { CanDeactivateQuizGuard } from "./can-deactivate-quiz.guard";
+
 @NgModule({
   declarations: [
     QuizComponent,
@@ -24,6 +26,7 @@ import { ReviewQuestionComponent } from "./review-question/review-question.compo
       {
         path: "",
         component: QuizComponent,
+        canDeactivate: [CanDeactivateQuizGuard],
       },
     ]),
   ],
